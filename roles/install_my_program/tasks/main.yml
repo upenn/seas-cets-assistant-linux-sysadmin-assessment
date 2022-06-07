@@ -1,0 +1,17 @@
+---
+- name: Install Make Package
+  package:
+    name: ['make']
+    state: present
+
+- name: Create Project Directory
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - /home/username/project_directory
+
+- name: Copy Makefile
+  copy:
+    src: Makefile
+    dest: /home/username/project_directory/

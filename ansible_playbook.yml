@@ -1,0 +1,13 @@
+---
+
+# file: ansible_playbook.yml
+
+- hosts: host1
+  roles:
+    - role: install_my_program
+      tags: installs
+
+- hosts: all
+  gather_facts: false
+  tasks:
+    - ping:

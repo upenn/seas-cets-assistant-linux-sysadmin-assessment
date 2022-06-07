@@ -1,0 +1,5 @@
+[development_servers]
+host1
+
+[simple_machine]
+host2
